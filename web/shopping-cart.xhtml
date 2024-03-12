@@ -21,6 +21,13 @@
                 <f:facet name="header">Prix unitaire</f:facet>
                 <h:outputText value="#{item.product.price}€" />
             </h:column>
+            <h:column>
+                <f:facet name="header">Actions</f:facet>
+                <h:form>
+                    <h:commandButton value="+" action="#{shoppingCartManager.incrementItemAmount(item)}" />
+                    <h:commandButton value="-" action="#{shoppingCartManager.decrementItemAmount(item)}" />
+                </h:form>
+            </h:column>
         </h:dataTable>
         <h:outputText value="Prix total: #{shoppingCartManager.getPrice()}€"/>
         <h:form>

@@ -39,6 +39,14 @@ public class ShoppingCartManager implements Serializable {
                 .reduce(0.0, (subTotal, item) -> subTotal + item);
     }
 
+    public void incrementItemAmount(ShoppingCartItem product) {
+        product.setAmount(product.getAmount() + 1);
+    }
+
+    public void decrementItemAmount(ShoppingCartItem product) {
+        product.setAmount(product.getAmount() - 1);
+    }
+
     public List<ShoppingCartItem> getCartItems() {
         return cartItems;
     }
