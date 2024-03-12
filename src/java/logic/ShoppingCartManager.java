@@ -44,7 +44,15 @@ public class ShoppingCartManager implements Serializable {
     }
 
     public void decrementItemAmount(ShoppingCartItem product) {
-        product.setAmount(product.getAmount() - 1);
+        if (product.getAmount() == 1) {
+            removeItem(product);
+        } else {
+            product.setAmount(product.getAmount() - 1);
+        }
+    }
+
+    public void removeItem(ShoppingCartItem product) {
+        cartItems.remove(product);
     }
 
     public List<ShoppingCartItem> getCartItems() {

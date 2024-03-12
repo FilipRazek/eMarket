@@ -26,6 +26,7 @@
                 <h:form>
                     <h:commandButton value="+" action="#{shoppingCartManager.incrementItemAmount(item)}" />
                     <h:commandButton value="-" action="#{shoppingCartManager.decrementItemAmount(item)}" />
+                    <h:commandButton value="⌫" action="#{shoppingCartManager.removeItem(item)}" />
                 </h:form>
             </h:column>
         </h:dataTable>
