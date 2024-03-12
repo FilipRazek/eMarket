@@ -41,6 +41,10 @@
     <navigation-rule>
         <from-view-id>/catalog.xhtml</from-view-id>
         <navigation-case>
+            <from-outcome>gotocart</from-outcome>
+            <to-view-id>/shopping-cart.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
             <from-outcome>backtoindex</from-outcome>
             <to-view-id>/index.xhtml</to-view-id>
         </navigation-case>

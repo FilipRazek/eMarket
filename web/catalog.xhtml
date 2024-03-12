@@ -24,7 +24,9 @@
             <h:column>
                 <f:facet name="header">Actions</f:facet>
                 <h:form>
-                    <h:commandButton value="Ajouter au panier" action="#{shoppingCartManager.addToCart()}" />
+                    <h:commandButton value="Ajouter au panier" action="#{shoppingCartManager.addToCart()}">
+                        <f:setPropertyActionListener value="#{item}" target="#{shoppingCartManager.prodToAdd}" />
+                    </h:commandButton>
                 </h:form>
             </h:column>
         </h:dataTable>

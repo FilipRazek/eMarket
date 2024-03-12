@@ -15,6 +15,7 @@ import model.Product;
 public class ShoppingCartManager implements Serializable {
 
     private List<ShoppingCartItem> cartItems;
+    private Product prodToAdd;
 
     public ShoppingCartManager() {
         cartItems = new ArrayList<>();
@@ -26,6 +27,8 @@ public class ShoppingCartManager implements Serializable {
     }
 
     public String addToCart() {
+        ShoppingCartItem addedItem = new ShoppingCartItem(1, 1, prodToAdd);
+        cartItems.add(addedItem);
         return "gotocart";
     }
 
@@ -37,4 +40,11 @@ public class ShoppingCartManager implements Serializable {
         this.cartItems = cartItems;
     }
 
+    public Product getProdToAdd() {
+        return prodToAdd;
+    }
+
+    public void setProdToAdd(Product prodToAdd) {
+        this.prodToAdd = prodToAdd;
+    }
 }
