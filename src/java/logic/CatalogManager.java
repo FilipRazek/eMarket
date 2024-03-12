@@ -19,11 +19,11 @@ public class CatalogManager implements Serializable {
     private Double formPrice;
 
     public CatalogManager() {
+        productList = new ArrayList<>();
     }
 
     @PostConstruct
     public void initCatalog() {
-        productList = new ArrayList<>();
         productList.add(new Product(0, "Masque de ski", 149.99));
     }
 
