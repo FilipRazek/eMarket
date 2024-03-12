@@ -7,6 +7,17 @@
     </h:head>
     <h:body>
         <div>Your cart:</div>
+        <h:dataTable value="#{shoppingCartManager.cartItems}" var="item">
+            <h:column>
+                <h:outputText value="#{item.amount}" />
+            </h:column>
+            <h:column>
+                <h:outputText value="#{item.product.name}" />
+            </h:column>
+            <h:column>
+                <h:outputText value="#{item.product.price}€" />
+            </h:column>
+        </h:dataTable>
         <h:form>
             <h:commandLink action="backtoindex">
                 <h:outputText value="Retour à la page principale"/>
