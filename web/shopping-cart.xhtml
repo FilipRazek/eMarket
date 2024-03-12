@@ -22,6 +22,7 @@
                 <h:outputText value="#{item.product.price}€" />
             </h:column>
         </h:dataTable>
+        <h:outputText value="Prix total: #{shoppingCartManager.getPrice()}€"/>
         <h:form>
             <h:commandLink action="backtoindex">
                 <h:outputText value="Retour à la page principale"/>

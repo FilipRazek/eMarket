@@ -32,6 +32,13 @@ public class ShoppingCartManager implements Serializable {
         return "gotocart";
     }
 
+    public Double getPrice() {
+        return cartItems
+                .stream()
+                .map(item -> item.getAmount() * item.getProduct().getPrice())
+                .reduce(0.0, (subTotal, item) -> subTotal + item);
+    }
+
     public List<ShoppingCartItem> getCartItems() {
         return cartItems;
     }
