@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core">
+    <h:head>
+        <link href="monstyle.css" rel="stylesheet" type="text/css" />
+        <title>eMarket - Accueil</title>
+    </h:head>
+    <h:body>
+        <h:outputText styleClass="title" value="Accueil"/>
+        <h:outputText />
+        <h:outputFormat styleClass="paragraph" value="Bienvenue sur notre application de commande en ligne {0} !"> 
+            <f:param value="eMarket" /> 
+        </h:outputFormat>
+        <h:form>
+            <ul>
+                <li>
+                    <h:commandLink action="tocatalog">
+                        <h:outputText value="Lien vers le catalogue"/>
+                    </h:commandLink>
+                </li>
+                <li>
+                    <h:commandLink action="toshoppingcart">
+                        <h:outputText value="Lien vers le panier"/>
+                    </h:commandLink>
+                </li>
+            </ul>
+        </h:form>
+        <h:outputLink styleClass="link paragraph" value="https://next-gen-messenger-frontend.onrender.com/">N'hésitez pas à aller voir la nouvelle application de messagerie</h:outputLink>
+        <h:graphicImage id="logo" value="./images/logo.jpg" />
+    </h:body>
+</html>

@@ -1,0 +1,19 @@
+body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.title {
+    color: purple;
+    font-size: 3em;
+    font-family: Arial Black, sans-serif;
+    border-bottom: 1px solid purple;
+}
+
+.paragraph {
+    display: block;
+    margin: 10px 0;
+}
+
+#logo {
+    border-radius: 100%;
+    height: 30vh;
+}
