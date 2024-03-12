@@ -7,6 +7,17 @@
     </h:head>
     <h:body>
         <div>Available products:</div>
+        <h:dataTable value="#{catalogManager.productList}" var="item">
+            <h:column>
+                <h:outputText value="#{item.id}" />
+            </h:column>
+            <h:column>
+                <h:outputText value="#{item.name}" />
+            </h:column>
+            <h:column>
+                <h:outputText value="#{item.price}€" />
+            </h:column>
+        </h:dataTable>
         <h:form>
             <h:commandLink action="backtoindex">
                 <h:outputText value="Retour à la page principale"/>
