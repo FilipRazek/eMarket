@@ -24,7 +24,9 @@ public class CatalogManager implements Serializable {
 
     @PostConstruct
     public void initCatalog() {
-        productList.add(new Product(0, "Masque de ski", 149.99));
+        productList.add(new Product(1, "Masque de ski", 149.99));
+        productList.add(new Product(2, "Skis", 1322.0));
+        productList.add(new Product(3, "Micka", 9000.0));
     }
 
     public String createProduct() {

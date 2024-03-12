@@ -23,7 +23,7 @@ public class ShoppingCartManager implements Serializable {
 
     @PostConstruct
     public void initCart() {
-        cartItems.add(new ShoppingCartItem(1, 2, new Product(2, "Produit", 57.0)));
+        cartItems.add(new ShoppingCartItem(1, 1, new Product(0, "Assurance ski", 148.55)));
     }
 
     public String addToCart() {
