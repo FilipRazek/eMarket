@@ -11,6 +11,12 @@ public class ShoppingCartItem implements Serializable {
     public ShoppingCartItem() {
     }
 
+    public ShoppingCartItem(Integer id, Integer amount, Product product) {
+        this.id = id;
+        this.amount = amount;
+        this.product = product;
+    }
+
     public Integer getId() {
         return id;
     }
