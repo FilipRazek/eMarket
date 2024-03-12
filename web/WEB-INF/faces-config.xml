@@ -58,5 +58,9 @@
             <from-outcome>backtoindex</from-outcome>
             <to-view-id>/index.xhtml</to-view-id>
         </navigation-case>
+        <navigation-case>
+            <from-outcome>gotocatalog</from-outcome>
+            <to-view-id>/catalog.xhtml</to-view-id>
+        </navigation-case>
     </navigation-rule>   
 </faces-config>

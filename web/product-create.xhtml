@@ -8,6 +8,15 @@
     <h:body>
         <div>Add a product</div>
         <h:form>
+            <h:outputLabel for="fieldID" value="Identifiant du produit :" />
+            <h:inputText id="fieldID" value="#{catalogManager.formID}" />
+            <h:outputLabel for="fieldName" value="Nom du produit :" />
+            <h:inputText id="fieldName" value="#{catalogManager.formName}" />
+            <h:outputLabel for="fieldPrice" value="Prix du produit :" />
+            <h:inputText id="fieldPrice" value="#{catalogManager.formPrice}" />
+            <h:commandButton value="Valider" action="#{catalogManager.createProduct()}" />
+        </h:form>
+        <h:form>
             <h:commandLink action="backtoindex">
                 <h:outputText value="Retour à la page principale"/>
             </h:commandLink>
