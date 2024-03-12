@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="jakarta.faces.html">
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core">
     <h:head>
         <link href="styles/shopping-cart.css" rel="stylesheet" type="text/css" />
         <title>Cart</title>
@@ -9,12 +10,15 @@
         <div>Your cart:</div>
         <h:dataTable value="#{shoppingCartManager.cartItems}" var="item">
             <h:column>
+                <f:facet name="header">Quantité</f:facet>
                 <h:outputText value="#{item.amount}" />
             </h:column>
             <h:column>
+                <f:facet name="header">Produit</f:facet>
                 <h:outputText value="#{item.product.name}" />
             </h:column>
             <h:column>
+                <f:facet name="header">Prix unitaire</f:facet>
                 <h:outputText value="#{item.product.price}€" />
             </h:column>
         </h:dataTable>
