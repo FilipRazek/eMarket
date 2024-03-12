@@ -25,6 +25,10 @@ public class ShoppingCartManager implements Serializable {
         cartItems.add(new ShoppingCartItem(1, 2, new Product(2, "Produit", 57.0)));
     }
 
+    public String addToCart() {
+        return "gotocart";
+    }
+
     public List<ShoppingCartItem> getCartItems() {
         return cartItems;
     }
